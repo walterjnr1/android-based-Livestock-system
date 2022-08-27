@@ -1,2 +1,4 @@
 # android-based-Livestock-system
 This system  has an API written in PHP and database in MYSQL. It is a livestock management system for keeping records of livestock/poultry in a farm especially it health status
+Livestock owners can update health status of their livestock from health to sick. livestock can either be "Healthy" or "sick"  Relevant government agency will be monitoring livestock health status of your livestock from their office through a web application.  So, they system is a hybrid system i.e. web and mobile. users uses Mobile app while government health agency uses web version in their office.   
+modules include * livestock registration i.e Register livestock in your farm. * updating of livestock health status * Delete livestock record * report Animal. i.e Report sick animal with a click of button to Health agency and they will come around for inspection and treatment
