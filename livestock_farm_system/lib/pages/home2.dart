@@ -7,6 +7,7 @@ import 'login.dart';
 import 'register.dart';
 import 'dart:async';
 import 'package:http/http.dart' as http;
+import 'package:carousel_slider/carousel_slider.dart';
 
 
 Future<User> fetchUser() async {
@@ -114,12 +115,90 @@ class _Home2State extends State<Home2> {
         backgroundColor: const Color.fromRGBO(49, 87, 110, 1.0),
 
       ),
-      body: Container(
+      body:          Container(
       padding: const EdgeInsets.all(7),
 
       child: Column(
 
       children: [
+
+        CarouselSlider(
+          items: [
+
+            //1st Image of Slider
+            Container(
+              margin: EdgeInsets.all(6.0),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(8.0),
+                image: DecorationImage(
+                  image: AssetImage('assets/logo.png'),
+                  fit: BoxFit.cover,
+                ),
+              ),
+            ),
+
+            //2nd Image of Slider
+            Container(
+              margin: EdgeInsets.all(6.0),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(8.0),
+                image: DecorationImage(
+                  image: AssetImage('assets/cow.jpg'),
+                  fit: BoxFit.cover,
+                ),
+              ),
+            ),
+
+            //3rd Image of Slider
+            Container(
+              margin: EdgeInsets.all(6.0),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(8.0),
+                image: DecorationImage(
+                  image: AssetImage('assets/3.jpg'),
+                  fit: BoxFit.cover,
+                ),
+              ),
+            ),
+
+            //4th Image of Slider
+            Container(
+              margin: EdgeInsets.all(6.0),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(8.0),
+                image: DecorationImage(
+                  image: AssetImage('assets/2.jpg'),
+                  fit: BoxFit.cover,
+                ),
+              ),
+            ),
+
+            //5th Image of Slider
+            Container(
+              margin: EdgeInsets.all(6.0),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(8.0),
+                image: DecorationImage(
+                  image: AssetImage('assets/5.jpg'),
+                  fit: BoxFit.cover,
+                ),
+              ),
+            ),
+
+          ],
+
+          //Slider Container properties
+          options: CarouselOptions(
+            height: 190.0,
+            enlargeCenterPage: true,
+            autoPlay: true,
+            aspectRatio: 16 / 9,
+            autoPlayCurve: Curves.fastOutSlowIn,
+            enableInfiniteScroll: true,
+            autoPlayAnimationDuration: Duration(milliseconds: 800),
+            viewportFraction: 0.8,
+          ),
+        ),
 
       const SizedBox(height: 11),
 
@@ -148,14 +227,7 @@ class _Home2State extends State<Home2> {
 
         ]//<------
       ),
-        width: double.infinity,
-        height: double.infinity,
-        decoration: const BoxDecoration(
-            image: DecorationImage(
-                image: AssetImage('assets/logo.png'),
-                fit: BoxFit.contain
-            )
-        ),
+
     ),
 
       drawer: Drawer(
